@@ -6,6 +6,12 @@ import requests
 app = Flask(__name__)
 
 app.config.from_pyfile("config.py")
+if app.config["APM_ENABLED"]:
+	from elasticapm.contrib.flask import ElasticAPM
+	print("starting apm")
+	apm = ElasticAPM(app)
+else:
+	print("no apm to start")
 
 db = SQLAlchemy(app)
 
