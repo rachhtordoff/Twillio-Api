@@ -8,3 +8,4 @@ psycopg2
 Flask-Migrate
 twilio==6.0.0
 Flask-LogConfig==0.4.2
+elastic-apm[flask]==2.0.0
