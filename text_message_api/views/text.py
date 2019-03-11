@@ -16,7 +16,7 @@ def send_text():
     json_data = request.json
     number= json_data['number']
     current_app.logger.info('sending a text message')
-    message = json_data['messagehead'] + '  '+ json_data['message'] + '  ' + json_data['link'] + '  ' + json_data['signature']
+    message = json_data['messagehead'] + json_data['message'] + json_data['link'] + '  ' + json_data['signature']
     client = Client(config.TEXT_ACCOUNT, config.TEXT_TOKEN)
     message = client.messages.create(to="+44" + number[1:], from_="+441173253472",
                                  body=message)
