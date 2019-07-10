@@ -1,21 +1,11 @@
 import os
 
-def convert_to_bool(value):
-    if value == "True":
-        return True
-    elif value == "False":
-        return False
-
-APP_NAME = os.environ['APP_NAME']
-APM_ENABLED = convert_to_bool(os.environ['APM_ENABLED'])
-
-# text server
-TEXT_ACCOUNT = 'AC947b1fb75af13bc22c5ed4f27c69da74'
-TEXT_TOKEN = '7bf0525b7c22784b9c80b8b8f8c4d36d'
-
-
+#env variables
+TEXT_ACCOUNT = os.environ['TEXT_ACCOUNT']
+TEXT_TOKEN = os.environ['TEXT_TOKEN']
 FLASK_LOG_LEVEL = os.environ['FLASK_LOG_LEVEL']
 
+#log config for flask logging
 LOGCONFIG = {
     'version': 1,
     'disable_existing_loggers': False,

@@ -1,13 +1,12 @@
-FROM python:3.5.3
-MAINTAINER Jacob Gathercole
+FROM python:3.7.2-alpine3.9
+MAINTAINER Rachael Tordoff
 
 RUN pip3 -q install gunicorn eventlet
 RUN apt-get install -y libpq-dev
 
 COPY / /opt/
 
-RUN pip3 install -q -r /opt/requirements.txt && \
-    pip3 install -q -r /opt/requirements_test.txt
+RUN pip3 install -q -r /opt/requirements.txt
 
 EXPOSE 8000
 
