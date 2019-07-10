@@ -12,8 +12,8 @@ A Python 3 api that uses the Twillio API to send texts
 
 An example usage using docker-compose.yaml
 
-* ``
-twillio_api:
+
+* twillio_api:
   build: twillio_api
   ports:
     - <chosen ports here>
@@ -29,7 +29,7 @@ twillio_api:
     - TEXT_TOKEN=<twillio token>
     - NUMBER_FROM=<twillio mobile number chosen to send texts from>
     - NUMBER_TO=<the number you wish to send texts to, this can be replaced by data passed over if you wish to use this dynamically>
-``
+
 
 * ``docker-compose up --build -d twillio_api`` - Runs the container
 
