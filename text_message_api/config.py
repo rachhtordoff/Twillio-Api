@@ -4,6 +4,8 @@ import os
 TEXT_ACCOUNT = os.environ['TEXT_ACCOUNT']
 TEXT_TOKEN = os.environ['TEXT_TOKEN']
 FLASK_LOG_LEVEL = os.environ['FLASK_LOG_LEVEL']
+NUMBER_FROM = os.environ['NUMBER_FROM']
+NUMBER_TO = os.environ['NUMBER_TO']
 
 #log config for flask logging
 LOGCONFIG = {
